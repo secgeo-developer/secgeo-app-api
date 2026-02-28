@@ -13,7 +13,6 @@ class CalcTests(SimpleTestCase):
         res = calc.subtract(10, 5)
         self.assertEqual(res, 5)
 
-
     def test_add_strings(self):
         """Test that the add function concatenates strings."""
         res = calc.add('Hello, ', 'World!')
