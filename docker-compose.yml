@@ -12,8 +12,12 @@ services:
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
-    env_file:
-      - .env
+    environment:
+      - DB_HOST=db
+      - DB_NAME=secgeodb
+      - DB_USER=secgeouser
+      - DB_PASS=secgeopass
+      - DEBUG=1
     depends_on:
       - db
   db:
@@ -21,8 +25,10 @@ services:
     platform: linux/amd64
     volumes:
       - dev-db-data:/var/lib/postgresql/data
-    env_file:
-      - .env
+    environment:
+      - POSTGRES_DB=secgeodb
+      - POSTGRES_USER=secgeouser
+      - POSTGRES_PASSWORD==secgeopass
 
 
 volumes:
