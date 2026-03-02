@@ -24,11 +24,9 @@ class Command(BaseCommand):
                 self.stdout.write(
                     self.style.SUCCESS('Veritabanı mevcut.!')
                     )
-                
                 return
 
             except (Psycopg2OpError, OperationalError):
-                
                 if time.time() - start_time > timeout:
                     raise Exception("Veritabanı bağlantı zaman aşımı")
 
