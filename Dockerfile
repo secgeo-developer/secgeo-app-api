@@ -12,9 +12,7 @@ EXPOSE 8000
 ARG DEV=false
 RUN apt-get update && apt-get install -y \
     postgresql-client \
-    build-essential \
     libpq-dev \
-    gcc \
     gdal-bin \
     libgdal-dev \
     libproj-dev \
