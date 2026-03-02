@@ -10,6 +10,16 @@ WORKDIR /app
 EXPOSE 8000
 
 ARG DEV=false
+RUN apt-get update && apt-get install -y \
+    postgresql-client \
+    build-essential \
+    libpq-dev \
+    gcc \
+    gdal-bin \
+    libgdal-dev \
+    libproj-dev \
+    binutils \
+    && rm -rf /var/lib/apt/lists/*
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install --no-cache-dir -r /tmp/requirements.txt && \
