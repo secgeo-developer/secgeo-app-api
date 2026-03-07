@@ -6,7 +6,6 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 
 
-
 # def create_user(email='user@example.com', password='testpass123'):
 #     """Yeni bir kullanıcı oluşturun ve geri döndürün."""
 #     return get_user_model().objects.create_user(email, password)
