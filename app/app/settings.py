@@ -46,9 +46,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core",
-    'rest_framework',
-    'drf_spectacular',
-    'user',
+    "rest_framework",
+    "drf_spectacular",
+    "user",
 ]
 
 MIDDLEWARE = [
@@ -159,7 +159,7 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'SeçGEO API',
-    'DESCRIPTION': 'SeçGEO Mekansal API Servisleri',
-    'VERSION': '1.0.0',
+    "TITLE": "SeçGEO API",
+    "DESCRIPTION": "SeçGEO Mekansal API Servisleri",
+    "VERSION": "1.0.0",
 }

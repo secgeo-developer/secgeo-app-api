@@ -6,27 +6,30 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('core', '0001_initial'),
+        ("core", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='user',
-            options={'verbose_name': 'Kullanıcı', 'verbose_name_plural': 'Kullanıcılar'},
+            name="user",
+            options={
+                "verbose_name": "Kullanıcı",
+                "verbose_name_plural": "Kullanıcılar",
+            },
         ),
         migrations.AlterField(
-            model_name='user',
-            name='is_active',
-            field=models.BooleanField(default=True, verbose_name='Aktif'),
+            model_name="user",
+            name="is_active",
+            field=models.BooleanField(default=True, verbose_name="Aktif"),
         ),
         migrations.AlterField(
-            model_name='user',
-            name='is_staff',
-            field=models.BooleanField(default=False, verbose_name='Yönetici'),
+            model_name="user",
+            name="is_staff",
+            field=models.BooleanField(default=False, verbose_name="Yönetici"),
         ),
         migrations.AlterField(
-            model_name='user',
-            name='name',
-            field=models.CharField(max_length=255, verbose_name='Adı Soyadı'),
+            model_name="user",
+            name="name",
+            field=models.CharField(max_length=255, verbose_name="Adı Soyadı"),
         ),
     ]
