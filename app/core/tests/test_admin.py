@@ -1,5 +1,5 @@
 """
-Django Admin testleri.
+Django Admin modifikasyon için testler.
 """
 
 from django.test import TestCase, Client
@@ -8,7 +8,7 @@ from django.urls import reverse
 
 
 class AdminSiteTests(TestCase):
-    """Admin site testleri."""
+    """Django Admin site testleri."""
 
     def setUp(self):
         """Test için gerekli verileri hazırla."""
